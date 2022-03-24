@@ -1,0 +1,43 @@
+{% extends '../base.html' %}
+
+{% load static %}
+
+{% block title %}
+Blog Detail
+{% endblock title %}
+
+{% block content %}
+
+<!-- Main content -->
+      <div class='container'>
+        <div class='row'>
+          <div class='col-md-12'>
+
+              <h3 class='box-title'>BLOG DETAIL </h3>
+
+              <table class="table table-bordered table-striped">
+                  <tr>
+                      <td>Title</td>
+                      <td>{{ blog.title }}></td>
+                  </tr>
+                  <tr>
+                      <td>Post Date</td>
+                      <td>{{ blog.post_date }}</td>
+                  </tr>
+                  <tr>
+                      <td>Image</td>
+                      <td><img src="{{ blog.image.url }}" style="width:300px"></td>
+                  </tr>
+                  <tr>
+                      <td>Article</td>
+                      <td>{{ blog.article }}</td>
+                  </tr>
+
+              </table>
+
+            </div><!-- /.box -->
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+<!-- /.content -->
+
+{% endblock content %}
